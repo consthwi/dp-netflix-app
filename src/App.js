@@ -6,6 +6,8 @@ import MoviePage from "./pages/Movies/MoviePage";
 import MovieDetailPage from "./pages/MovieDetail/MovieDetailPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { API_KEY } from "./utils/api";
+import { useEffect } from "react";
 
 // 홈페이지 /
 // 영화 전체보여주는 페이지 (서치가능) /movies
@@ -18,6 +20,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   // user의 상태에 따라 보여줄 수 있는 레이아웃이 다양하다면,
   // layout 또한 Routes에 넣어서 컨트롤 하는 것이 좋다.
+
+  useEffect(() => {
+    console.log(API_KEY);
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<AppLayout />}>
