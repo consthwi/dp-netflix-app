@@ -19,7 +19,7 @@ const AppLayout = () => {
         className="bg-body-tertiary custom-navBar"
       >
         <Container>
-          <Navbar.Brand href="#">
+          <Navbar.Brand>
             <img
               src={`${process.env.PUBLIC_URL}/logo.png`}
               alt="Logo"
