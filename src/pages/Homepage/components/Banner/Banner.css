@@ -37,11 +37,15 @@
 }
 
 @media(max-width: 768px){
+  .Banner-text-area {
+    width: 70%;
+  }
+
   .Banner-text-area h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   
   .Banner-text-area p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }

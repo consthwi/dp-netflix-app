@@ -3,3 +3,8 @@
   overflow: hidden;
   height: 380px;
 }
+
+.PopularMovieSlide h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+}
