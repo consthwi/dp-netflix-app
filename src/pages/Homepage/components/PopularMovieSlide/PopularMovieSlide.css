@@ -1,0 +1,5 @@
+.PopularMovieSlide .carousel-container {
+  /* border: 3px solid blue; */
+  overflow: hidden;
+  height: 380px;
+}

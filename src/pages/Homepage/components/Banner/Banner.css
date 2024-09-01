@@ -1,0 +1,47 @@
+
+
+.Banner {
+  height: 56vh;
+  background: no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Banner:before {
+  content:'';
+  background: linear-gradient(to top, #000000, transparent);
+  position: absolute;
+  left: 0; 
+  height: 56vh;
+  width: 100%;
+}
+
+.Banner-container {
+  z-index: 2;
+}
+
+.Banner-text-area {
+  width: 50%;
+}
+
+.Banner-text-area h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+}
+
+.Banner-text-area p {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+@media(max-width: 768px){
+  .Banner-text-area h1 {
+    font-size: 2rem;
+  }
+  
+  .Banner-text-area p {
+    font-size: 0.8rem;
+  }
+}
