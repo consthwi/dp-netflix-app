@@ -1,4 +1,4 @@
-Project 3주차 09-01 제출 과제 (netflix 6~7 +8~9강)
+Project 3주차 09-02 제출 과제 (netflix 8-9강 + 10-12강)
 
 배포 도메인 주소(netlify)
 https://hwi-project-004.netlify.app/
