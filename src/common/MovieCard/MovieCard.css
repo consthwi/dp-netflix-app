@@ -2,7 +2,6 @@
   position: relative;
   background-color: #141414;
   color: #fff;
-  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
@@ -52,7 +51,9 @@
 .movie-genre {
   font-size: 14px;
   display: flex;
-  gap: 3px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
 }
 
 .movie-card-body {
@@ -68,10 +69,11 @@
   /* border: 2px solid red; */
   width: 100%;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .movie-vote {
-  font-size: 16px;
+  font-size: 14px;
   color: #f5c518;
 }
 
@@ -82,9 +84,17 @@
 
 .movie-adult {
   background-color: #e50914;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 4px 4px;
+  border-radius: 50%;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.movie-child {
+  border: #fff 1px solid;
+  padding: 4px 4px;
+  border-radius: 50%;
+  font-size: 14px;
   text-transform: uppercase;
 }
 

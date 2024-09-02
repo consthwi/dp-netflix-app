@@ -3,14 +3,14 @@ import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
 import Alert from "react-bootstrap/Alert";
 import "./Banner.css";
 import { Container } from "react-bootstrap";
+import LoadingSpinner from "../../../../common/LoadingSpinner/LoadingSpinner";
 
 const Banner = () => {
   // useQuery가 리턴하는 값들을 기억하라
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-  console.log("ddd", data);
+
   if (isLoading) {
-    return <h1>Loading...</h1>;
-    // 회사에서 로딩스피너 제작하기
+    return <LoadingSpinner color={"#e50914"} size={250} />;
   }
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;

@@ -1,0 +1,50 @@
+/* popular movie slide css */
+.PopularMovieSlide {
+  margin: 50px 0;
+}
+
+.PopularMovieSlide .carousel-container {
+  /* border: 3px solid blue; */
+  overflow: hidden;
+  height: 380px;
+}
+
+.PopularMovieSlide h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+}
+/* popular movie slide css end */
+
+/* top rated movie slide css */
+.TopRatedMovieSlide {
+  margin: 50px 0;
+}
+
+.TopRatedMovieSlide .carousel-container {
+  /* border: 3px solid blue; */
+  overflow: hidden;
+  height: 380px;
+}
+
+.TopRatedMovieSlide h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+}
+/* top rated movie slide css end */
+
+/* upcoming movie slide css*/
+.UpcomingMoiveSlide {
+  margin: 50px 0;
+}
+
+.UpcomingMoiveSlide .carousel-container {
+  /* border: 3px solid blue; */
+  overflow: hidden;
+  height: 380px;
+}
+
+.UpcomingMoiveSlide h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+}
+/* upcoming movie slide css end*/

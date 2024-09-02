@@ -12,7 +12,7 @@
 
 .Banner:before {
   content:'';
-  background: linear-gradient(to top, #141414, transparent);
+  background: linear-gradient(to top, #0c0c0c, transparent);
   position: absolute;
   left: 0; 
   height: 56vh;
