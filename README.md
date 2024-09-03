@@ -1,4 +1,7 @@
-Project 3주차 09-02 제출 과제 (netflix 8-9강 + 10-12강)
+Project 3주차 09-03 제출 과제 (netflix 13~14강 + final과제 진행 중 )
+
+1. MovieCard 클릭 시 MovieDetailPage 이동 & 데이터 패칭
+2. MovieDetailPage CSS 작업 예정
 
 배포 도메인 주소(netlify)
 https://hwi-project-004.netlify.app/
