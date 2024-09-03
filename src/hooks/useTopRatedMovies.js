@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import api from "../utils/api";
 
-const fetchTopRated = () => {
-  return api.get(`/movie/top_rated`)
+const fetchTopRated = async () => {
+  return await api.get(`/movie/top_rated`)
 }
 
 export const useTopRatedMoviesQuery = () => {

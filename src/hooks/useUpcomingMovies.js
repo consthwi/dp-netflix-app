@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import api from "../utils/api";
 
-const fetchUpcoming = () => {
-  return api.get(`/movie/upcoming`)
+const fetchUpcoming = async () => {
+  return await api.get(`/movie/upcoming`)
 }
 
 export const useUpcomingMoviesQuery = () => {

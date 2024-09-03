@@ -7,7 +7,7 @@ import LoadingSpinner from "../../../../common/LoadingSpinner/LoadingSpinner";
 
 const TopRatedMovieSlide = () => {
   const { data, isLoading, isError, error } = useTopRatedMoviesQuery();
-  console.log(data);
+  // console.log(data);
 
   if (isLoading) {
     return <LoadingSpinner color={"#e50914"} size={250} />;

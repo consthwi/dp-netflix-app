@@ -4,8 +4,12 @@ import "./MovieCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
+
+  const navigate = useNavigate();
+
   // data를 genreData로 재정의!
   const { data: genreData } = useMovieGenreQuery();
   // console.log("ggg", genreData);
@@ -15,7 +19,7 @@ const MovieCard = ({ movie }) => {
     if (!genreData) {
       return [];
     } else {
-      console.log(genreIdList);
+      // console.log(genreIdList);
       const genreNameList = genreIdList.map((id) => {
         // genreData 배열에서 현재 ID와 일치하는 장르 객체를 찾는다.
         const genreObj = genreData.find((genre) => genre.id === id);
@@ -25,12 +29,17 @@ const MovieCard = ({ movie }) => {
     }
   };
 
+  const goToDetail = () => {
+    navigate(`/movies/${movie.id}`)
+  }
+
   return (
     <div
       className="movie-card"
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.poster_path})`,
       }}
+      onClick={goToDetail}
     >
       <div className="movie-card-overlay">
         <div className="movie-card-header">

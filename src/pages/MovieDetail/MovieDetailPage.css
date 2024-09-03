@@ -1,0 +1,93 @@
+.movie-page {
+  display: flex;
+  background-color: #000;
+  /* Dark background */
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.movie-poster {
+  flex: 1;
+  max-width: 300px;
+  /* Adjust based on your design */
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.movie-details {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.movie-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.movie-tagline {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.movie-genres {
+  margin-bottom: 15px;
+}
+
+.genre {
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rating-score {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.rating-count {
+  margin-right: 10px;
+}
+
+.rating-all {
+  background-color: #f39c12;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.movie-description {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  margin-left: 10px;
+}
