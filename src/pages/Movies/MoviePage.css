@@ -1,0 +1,12 @@
+.movie-card-wrapper {
+  /* border: 3px solid blue; */
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media(max-width: 768px){
+  .movie-card-wrapper {
+    justify-content: center;
+  }
+}
