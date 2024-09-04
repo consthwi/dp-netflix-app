@@ -48,11 +48,11 @@ const MovieDetailPage = () => {
         <div className="movie-info">
           <div className="info-item">
             <span className="label">Budget:</span>
-            <span className="value">$ {data?.budget}</span>
+            <span className="value">$ {data ? new Intl.NumberFormat("en-US").format(data.budget) : "No Data"}</span>
           </div>
           <div className="info-item">
             <span className="label">Revenue:</span>
-            <span className="value">$ {data?.revenue}</span>
+            <span className="value">$ {data ? new Intl.NumberFormat("en-US").format(data.revenue) : "No Data"}</span>
           </div>
           <div className="info-item">
             <span className="label">Release Date:</span>
