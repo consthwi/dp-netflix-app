@@ -4,8 +4,8 @@ import api from "../utils/api";
 const fetchSearchMovie = ({ keyword, page }) => {
   // navbar그냥 클릭(keyword x) 경우, keyword o 경우
   return keyword
-    ? api.get(`/search/movie?query=${keyword}&page=${page}`)
-    : api.get(`/movie/popular?page=${page}`);
+    ? api.get(`/search/movie?query=${keyword}&page=${page}&language=ko`)
+    : api.get(`/movie/popular?page=${page}&language=ko`);
 };
 
 export const useSearchMovieQuery = ({ keyword, page }) => {

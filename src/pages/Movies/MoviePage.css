@@ -1,12 +1,78 @@
+.MoviePage {
+  padding: 50px 0;
+}
+
 .movie-card-wrapper {
   /* border: 3px solid blue; */
-  margin: 20px 0;
   display: flex;
   justify-content: flex-end;
+  margin: 15px 0;
 }
 
 @media(max-width: 768px){
   .movie-card-wrapper {
     justify-content: center;
   }
+}
+
+/* pagination */
+.MoviePage .page-area {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.MoviePage .page-area .pagination-container .pagination{
+  /* border: 2px solid gold; */
+  margin: 0;
+}
+
+.MoviePage .page-item {
+  margin: 0 5px;
+}
+
+.MoviePage .page-link {
+  color: #fff;
+  background-color: #141414;
+  border: 1px solid #333;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.MoviePage .page-link:hover {
+  background-color: #e50914;
+  border-color: #e50914;
+  color: #fff;
+  cursor: pointer;
+}
+
+.MoviePage .active .page-link {
+  background-color: #e50914;
+  border-color: #e50914;
+}
+
+.MoviePage .disabled .page-link {
+  color: #666;
+  background-color: #333;
+  border-color: #333;
+  cursor: not-allowed;
+}
+
+.MoviePage .break-me {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  background: url(../../../public/noData.png) no-repeat center/contain
 }

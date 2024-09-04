@@ -21,14 +21,15 @@ import ReactPaginate from "react-paginate";
 
 const MoviePage = () => {
   const [query] = useSearchParams();
+  const keyword = query.get("q");
 
   // pagination
   const [page, setPage] = useState(1);
+
   const handlePageClick = ({ selected }) => {
     setPage(selected + 1);
   };
 
-  const keyword = query.get("q");
   const { data, isLoading, isError, error } = useSearchMovieQuery({
     keyword,
     page,
@@ -41,45 +42,84 @@ const MoviePage = () => {
   if (isError) {
     return <Alert variant="danger">{error.message}</Alert>;
   }
+
+  const hasResults = data?.results.length > 0;
+
   return (
     <Container className="MoviePage text-white">
       <Row>
-        <Col md={4} xs={12}>
+        <Col lg={4} md={3} xs={12}>
           filter
         </Col>
-        <Col md={8} xs={12}>
+        <Col lg={8} md={9} xs={12}>
           <Row>
-            {data?.results.map((movie, idx) => {
-              return (
-                <Col className="movie-card-wrapper" key={idx} md={6} xs={12}>
-                  <MovieCard movie={movie} />
-                </Col>
-              );
-            })}
+            {hasResults ? (
+              data?.results.map((movie, idx) => {
+                return (
+                  <Col
+                    className="movie-card-wrapper"
+                    key={idx}
+                    lg={4}
+                    md={6}
+                    xs={12}
+                  >
+                    <MovieCard movie={movie} />
+                  </Col>
+                );
+              })
+            ) : (
+              <div className="no-data">검색 결과가 존재하지 않습니다.</div>
+            )}
           </Row>
-          <ReactPaginate
-            nextLabel="next >"
-            onPageChange={handlePageClick}
-            pageRangeDisplayed={3}
-            marginPagesDisplayed={2}
-            pageCount={data?.total_pages} // 전체 페이지의 개수
-            previousLabel="< previous"
-            pageClassName="page-item"
-            pageLinkClassName="page-link"
-            previousClassName="page-item"
-            previousLinkClassName="page-link"
-            nextClassName="page-item"
-            nextLinkClassName="page-link"
-            breakLabel="..."
-            breakClassName="page-item"
-            breakLinkClassName="page-link"
-            containerClassName="pagination"
-            activeClassName="active"
-            renderOnZeroPageCount={null}
-            forcePage={page - 1}
-          />
+          <div className="page-area">
+            <div className={`pagination-container`}>
+              <ReactPaginate
+                previousLabel={"<"}
+                nextLabel={">"}
+                breakLabel={"..."}
+                breakClassName={"break-me"}
+                pageCount={data?.total_pages}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={3}
+                onPageChange={handlePageClick}
+                containerClassName={"pagination"}
+                pageClassName={"page-item"}
+                pageLinkClassName={"page-link"}
+                previousClassName={"page-item"}
+                nextClassName={"page-item"}
+                previousLinkClassName={"page-link"}
+                nextLinkClassName={"page-link"}
+                activeClassName={"active"}
+                disabledClassName={"disabled"}
+                forcePage={page - 1}
+              />
+            </div>
+          </div>
         </Col>
       </Row>
+
+      {/* <ReactPaginate
+        className="MoviePage-pagination"
+        nextLabel=">"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        marginPagesDisplayed={2}
+        pageCount={data?.total_pages} // 전체 페이지의 개수
+        previousLabel="<"
+        pageClassName="page-item"
+        pageLinkClassName="page-link"
+        previousClassName="page-item"
+        previousLinkClassName="page-link"
+        nextClassName="page-item"
+        nextLinkClassName="page-link"
+        breakLabel="..."
+        breakClassName="page-item"
+        breakLinkClassName="page-link"
+        containerClassName="pagination"
+        activeClassName="active"
+        renderOnZeroPageCount={null}
+        forcePage={page - 1}
+      /> */}
     </Container>
   );
 };

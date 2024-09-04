@@ -1,68 +1,80 @@
-.movie-page {
+.MovieDetail {
   display: flex;
-  background-color: #000;
-  /* Dark background */
   color: #fff;
   padding: 20px;
   font-family: Arial, sans-serif;
+  gap: 20px;
 }
 
-.movie-poster {
+.MovieDetail .movie-poster {
+  display: flex;
   flex: 1;
-  max-width: 300px;
   /* Adjust based on your design */
 }
 
-.movie-poster img {
+.MovieDetail .movie-poster img {
   width: 100%;
   border-radius: 10px;
+  min-width: 300px;
+  object-fit: cover;
 }
 
-.movie-details {
+.MovieDetail .movie-details {
   flex: 2;
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.movie-title {
+.MovieDetail .movie-title {
   font-size: 36px;
   margin-bottom: 10px;
 }
 
-.movie-tagline {
+.MovieDetail .movie-tagline {
   font-style: italic;
   color: #ccc;
   margin-bottom: 20px;
 }
 
-.movie-genres {
+.MovieDetail .movie-genres {
   margin-bottom: 15px;
 }
 
-.genre {
+.MovieDetail .genre {
   background-color: #e74c3c;
   color: white;
   padding: 5px 10px;
   margin-right: 5px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.movie-rating {
+.MovieDetail .movie-rating {
   display: flex;
   align-items: center;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-.rating-score {
-  font-size: 24px;
+.MovieDetail .rating-score {
+  display: flex;
+  font-size: 20px;
   margin-right: 10px;
+  align-items: center;
+  gap: 5px;
 }
 
-.rating-count {
+.MovieDetail .rating-count {
+  display: flex;
+  font-size: 20px;
   margin-right: 10px;
+  align-items: center;
+  gap: 5px;
+  color: #ddd;
 }
 
-.rating-all {
+.MovieDetail .rating-all {
   background-color: #f39c12;
   color: white;
   padding: 3px 8px;
@@ -70,24 +82,57 @@
   font-size: 14px;
 }
 
-.movie-description {
+.MovieDetail .rating-adult {
+  background-color: #f31212;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.MovieDetail .movie-description {
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-.movie-info {
+.MovieDetail .movie-info {
   display: flex;
   flex-direction: column;
 }
 
-.info-item {
+.MovieDetail .info-item {
+  width: 100%;
   margin-bottom: 10px;
 }
 
-.label {
+.MovieDetail .label {
   font-weight: bold;
 }
 
-.value {
+.MovieDetail .value {
   margin-left: 10px;
+}
+
+@media(max-width: 768px){
+  .MovieDetail {
+    flex-direction: column;
+  }
+
+  .MovieDetail .movie-poster {
+    justify-content: center;
+  }
+
+  .MovieDetail .movie-poster img {
+    width: 60%;
+    border-radius: 10px;
+    min-width: 300px;
+  }
+
+  .MovieDetail .movie-details {
+    text-align: center;
+  }
+  
+  .MovieDetail .movie-rating {
+    justify-content: center;
+  }
 }
